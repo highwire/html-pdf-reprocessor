@@ -1,0 +1,434 @@
+2024-11-08T13:53:02.271+05:30  INFO 6332 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : Starting PdfserviceApplication using Java 21.0.3 with PID 6332 (C:\Users\Pooja.Tomar\Downloads\pdfservice\pdfservice\target\classes started by Pooja.Tomar in C:\Users\Pooja.Tomar\Downloads\pdfservice\pdfservice)
+2024-11-08T13:53:02.380+05:30  INFO 6332 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T13:53:04.506+05:30  INFO 6332 --- [pdfservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T13:53:04.607+05:30  INFO 6332 --- [pdfservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2024-11-08T13:53:05.630+05:30  INFO 6332 --- [pdfservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-08T13:53:05.649+05:30  INFO 6332 --- [pdfservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-08T13:53:05.649+05:30  INFO 6332 --- [pdfservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-08T13:53:05.738+05:30  INFO 6332 --- [pdfservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-08T13:53:05.739+05:30  INFO 6332 --- [pdfservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3248 ms
+2024-11-08T13:53:05.970+05:30  INFO 6332 --- [pdfservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T13:53:06.085+05:30  INFO 6332 --- [pdfservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T13:53:06.145+05:30  INFO 6332 --- [pdfservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T13:53:06.619+05:30  INFO 6332 --- [pdfservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T13:53:06.671+05:30  INFO 6332 --- [pdfservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T13:53:11.490+05:30  INFO 6332 --- [pdfservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ec0ca83
+2024-11-08T13:53:11.502+05:30  INFO 6332 --- [pdfservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T13:53:11.910+05:30  WARN 6332 --- [pdfservice] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.16 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-11-08T13:53:11.915+05:30  WARN 6332 --- [pdfservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-08T13:53:12.998+05:30  INFO 6332 --- [pdfservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T13:53:14.828+05:30  INFO 6332 --- [pdfservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T13:53:15.077+05:30  INFO 6332 --- [pdfservice] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-08T13:53:15.628+05:30  WARN 6332 --- [pdfservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T13:53:16.092+05:30  INFO 6332 --- [pdfservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-08T13:53:16.143+05:30  INFO 6332 --- [pdfservice] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [fr-kafka-app-dev-01.highwire.org:9092, fr-kafka-app-dev-02.highwire.org:9092, fr-kafka-app-dev-03.highwire.org:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-08T13:53:16.219+05:30  INFO 6332 --- [pdfservice] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-11-08T13:53:17.241+05:30  INFO 6332 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-11-08T13:53:17.241+05:30  INFO 6332 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-11-08T13:53:17.241+05:30  INFO 6332 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1731054197238
+2024-11-08T13:53:17.246+05:30  INFO 6332 --- [pdfservice] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Subscribed to topic(s): html-pdf-svc.processed
+2024-11-08T13:53:17.270+05:30  INFO 6332 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : Started PdfserviceApplication in 16.973 seconds (process running for 19.182)
+2024-11-08T13:53:19.142+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group_id-1, groupId=group_id] Cluster ID: ROauDYKRTLuECALn6EvKtA
+2024-11-08T13:53:19.144+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Discovered group coordinator fa-kafka-app-dev-02.highwire.org:9092 (id: 1207681406 rack: null)
+2024-11-08T13:53:19.419+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] (Re-)joining group
+2024-11-08T13:53:23.928+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Successfully joined group with generation Generation{generationId=1, memberId='consumer-group_id-1-99c51ec4-931b-4b88-8017-5feb842fe54a', protocol='range'}
+2024-11-08T13:53:23.951+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Finished assignment for group at generation 1: {consumer-group_id-1-99c51ec4-931b-4b88-8017-5feb842fe54a=Assignment(partitions=[html-pdf-svc.processed-0])}
+2024-11-08T13:53:24.314+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Successfully synced group in generation Generation{generationId=1, memberId='consumer-group_id-1-99c51ec4-931b-4b88-8017-5feb842fe54a', protocol='range'}
+2024-11-08T13:53:24.317+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Notifying assignor about the new Assignment(partitions=[html-pdf-svc.processed-0])
+2024-11-08T13:53:24.324+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group_id-1, groupId=group_id] Adding newly assigned partitions: html-pdf-svc.processed-0
+2024-11-08T13:53:24.679+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Found no committed offset for partition html-pdf-svc.processed-0
+2024-11-08T13:53:25.023+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Found no committed offset for partition html-pdf-svc.processed-0
+2024-11-08T13:53:26.981+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-group_id-1, groupId=group_id] Resetting offset for partition html-pdf-svc.processed-0 to position FetchPosition{offset=76909, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[fa-kafka-app-dev-03.highwire.org:9092 (id: 939831290 rack: null)], epoch=absent}}.
+2024-11-08T13:53:27.465+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group_id: partitions assigned: [html-pdf-svc.processed-0]
+2024-11-08T13:55:46.440+05:30  INFO 6332 --- [pdfservice] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-08T13:55:46.460+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group_id-1, groupId=group_id] Revoke previously assigned partitions html-pdf-svc.processed-0
+2024-11-08T13:55:46.461+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group_id: partitions revoked: [html-pdf-svc.processed-0]
+2024-11-08T13:55:46.461+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Member consumer-group_id-1-99c51ec4-931b-4b88-8017-5feb842fe54a sending LeaveGroup request to coordinator fa-kafka-app-dev-02.highwire.org:9092 (id: 1207681406 rack: null) due to the consumer unsubscribed from all topics
+2024-11-08T13:55:46.463+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-08T13:55:46.463+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Request joining group due to: consumer pro-actively leaving the group
+2024-11-08T13:55:46.463+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Unsubscribed all topics or patterns and assigned partitions
+2024-11-08T13:55:46.468+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-08T13:55:46.468+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Request joining group due to: consumer pro-actively leaving the group
+2024-11-08T13:55:46.928+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-group_id-1, groupId=group_id] Node 939831290 sent an invalid full fetch response with extraPartitions=(html-pdf-svc.processed-0), response=(html-pdf-svc.processed-0)
+2024-11-08T13:55:47.166+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-11-08T13:55:47.167+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-08T13:55:47.168+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-08T13:55:47.169+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-11-08T13:55:47.196+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-group_id-1 unregistered
+2024-11-08T13:55:47.197+05:30  INFO 6332 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group_id: Consumer stopped
+2024-11-08T13:55:47.229+05:30  INFO 6332 --- [pdfservice] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T13:55:47.234+05:30  INFO 6332 --- [pdfservice] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-08T13:55:47.248+05:30  INFO 6332 --- [pdfservice] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-08T13:55:51.573+05:30  INFO 29700 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : Starting PdfserviceApplication using Java 21.0.3 with PID 29700 (C:\Users\Pooja.Tomar\Downloads\pdfservice\pdfservice\target\classes started by Pooja.Tomar in C:\Users\Pooja.Tomar\Downloads\pdfservice\pdfservice)
+2024-11-08T13:55:51.578+05:30  INFO 29700 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T13:55:52.733+05:30  INFO 29700 --- [pdfservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T13:55:52.847+05:30  INFO 29700 --- [pdfservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2024-11-08T13:55:53.723+05:30  INFO 29700 --- [pdfservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-08T13:55:53.745+05:30  INFO 29700 --- [pdfservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-08T13:55:53.745+05:30  INFO 29700 --- [pdfservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-08T13:55:53.832+05:30  INFO 29700 --- [pdfservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-08T13:55:53.833+05:30  INFO 29700 --- [pdfservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2176 ms
+2024-11-08T13:55:54.071+05:30  INFO 29700 --- [pdfservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T13:55:54.164+05:30  INFO 29700 --- [pdfservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T13:55:54.227+05:30  INFO 29700 --- [pdfservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T13:55:54.788+05:30  INFO 29700 --- [pdfservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T13:55:54.858+05:30  INFO 29700 --- [pdfservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T13:55:59.005+05:30  INFO 29700 --- [pdfservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@402f61f5
+2024-11-08T13:55:59.017+05:30  INFO 29700 --- [pdfservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T13:55:59.517+05:30  WARN 29700 --- [pdfservice] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.16 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-11-08T13:55:59.526+05:30  WARN 29700 --- [pdfservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-08T13:56:01.176+05:30  INFO 29700 --- [pdfservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T13:56:02.855+05:30  INFO 29700 --- [pdfservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T13:56:03.261+05:30  INFO 29700 --- [pdfservice] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-08T13:56:04.277+05:30  WARN 29700 --- [pdfservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T13:56:05.023+05:30  INFO 29700 --- [pdfservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-08T13:56:05.106+05:30  INFO 29700 --- [pdfservice] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [fr-kafka-app-dev-01.highwire.org:9092, fr-kafka-app-dev-02.highwire.org:9092, fr-kafka-app-dev-03.highwire.org:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-08T13:56:05.223+05:30  INFO 29700 --- [pdfservice] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-11-08T13:56:05.419+05:30  INFO 29700 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-11-08T13:56:05.419+05:30  INFO 29700 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-11-08T13:56:05.419+05:30  INFO 29700 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1731054365416
+2024-11-08T13:56:05.427+05:30  INFO 29700 --- [pdfservice] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Subscribed to topic(s): html-pdf-svc.processed
+2024-11-08T13:56:05.457+05:30  INFO 29700 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : Started PdfserviceApplication in 14.721 seconds (process running for 16.11)
+2024-11-08T13:56:07.717+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group_id-1, groupId=group_id] Cluster ID: ROauDYKRTLuECALn6EvKtA
+2024-11-08T13:56:07.718+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Discovered group coordinator fa-kafka-app-dev-02.highwire.org:9092 (id: 1207681406 rack: null)
+2024-11-08T13:56:07.723+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] (Re-)joining group
+2024-11-08T13:56:12.259+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Successfully joined group with generation Generation{generationId=3, memberId='consumer-group_id-1-226f9e08-4375-4245-b51f-06ea49947219', protocol='range'}
+2024-11-08T13:56:12.280+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Finished assignment for group at generation 3: {consumer-group_id-1-226f9e08-4375-4245-b51f-06ea49947219=Assignment(partitions=[html-pdf-svc.processed-0])}
+2024-11-08T13:56:12.741+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Successfully synced group in generation Generation{generationId=3, memberId='consumer-group_id-1-226f9e08-4375-4245-b51f-06ea49947219', protocol='range'}
+2024-11-08T13:56:12.743+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Notifying assignor about the new Assignment(partitions=[html-pdf-svc.processed-0])
+2024-11-08T13:56:12.752+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group_id-1, groupId=group_id] Adding newly assigned partitions: html-pdf-svc.processed-0
+2024-11-08T13:56:13.461+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition html-pdf-svc.processed-0 to the committed offset FetchPosition{offset=76909, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[fa-kafka-app-dev-03.highwire.org:9092 (id: 939831290 rack: null)], epoch=absent}}
+2024-11-08T13:56:13.571+05:30  INFO 29700 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group_id: partitions assigned: [html-pdf-svc.processed-0]
+2024-11-08T14:00:04.146+05:30  INFO 18676 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : Starting PdfserviceApplication using Java 21.0.3 with PID 18676 (E:\JCoreScolaris\JCOREScolarisCode\htmlPdfReprocessor\target\classes started by Pooja.Tomar in E:\JCoreScolaris\JCOREScolarisCode\htmlPdfReprocessor)
+2024-11-08T14:00:04.149+05:30  INFO 18676 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T14:00:05.037+05:30  INFO 18676 --- [pdfservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T14:00:05.127+05:30  INFO 18676 --- [pdfservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2024-11-08T14:00:05.842+05:30  INFO 18676 --- [pdfservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-08T14:00:05.862+05:30  INFO 18676 --- [pdfservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-08T14:00:05.863+05:30  INFO 18676 --- [pdfservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-08T14:00:05.957+05:30  INFO 18676 --- [pdfservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-08T14:00:05.958+05:30  INFO 18676 --- [pdfservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1741 ms
+2024-11-08T14:00:06.175+05:30  INFO 18676 --- [pdfservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T14:00:06.269+05:30  INFO 18676 --- [pdfservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T14:00:06.320+05:30  INFO 18676 --- [pdfservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T14:00:06.764+05:30  INFO 18676 --- [pdfservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T14:00:06.806+05:30  INFO 18676 --- [pdfservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T14:00:11.320+05:30  INFO 18676 --- [pdfservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75a9cc24
+2024-11-08T14:00:11.324+05:30  INFO 18676 --- [pdfservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T14:00:11.749+05:30  WARN 18676 --- [pdfservice] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.16 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-11-08T14:00:11.755+05:30  WARN 18676 --- [pdfservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-08T14:00:12.761+05:30  INFO 18676 --- [pdfservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T14:00:14.225+05:30  INFO 18676 --- [pdfservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T14:00:14.518+05:30  INFO 18676 --- [pdfservice] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-08T14:00:15.165+05:30  WARN 18676 --- [pdfservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T14:00:15.780+05:30  INFO 18676 --- [pdfservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-08T14:00:15.854+05:30  INFO 18676 --- [pdfservice] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [fr-kafka-app-dev-01.highwire.org:9092, fr-kafka-app-dev-02.highwire.org:9092, fr-kafka-app-dev-03.highwire.org:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-08T14:00:15.976+05:30  INFO 18676 --- [pdfservice] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-11-08T14:00:16.946+05:30  INFO 18676 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-11-08T14:00:16.946+05:30  INFO 18676 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-11-08T14:00:16.946+05:30  INFO 18676 --- [pdfservice] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1731054616944
+2024-11-08T14:00:16.952+05:30  INFO 18676 --- [pdfservice] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Subscribed to topic(s): html-pdf-svc.processed
+2024-11-08T14:00:16.970+05:30  INFO 18676 --- [pdfservice] [main] c.h.pdfservice.PdfserviceApplication     : Started PdfserviceApplication in 13.42 seconds (process running for 14.88)
+2024-11-08T14:00:18.964+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group_id-1, groupId=group_id] Cluster ID: ROauDYKRTLuECALn6EvKtA
+2024-11-08T14:00:18.964+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Discovered group coordinator fa-kafka-app-dev-02.highwire.org:9092 (id: 1207681406 rack: null)
+2024-11-08T14:00:19.238+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] (Re-)joining group
+2024-11-08T14:00:23.636+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Successfully joined group with generation Generation{generationId=5, memberId='consumer-group_id-1-58148c94-6dc5-4ca0-9b0e-ff3a41a1c74e', protocol='range'}
+2024-11-08T14:00:23.644+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Finished assignment for group at generation 5: {consumer-group_id-1-58148c94-6dc5-4ca0-9b0e-ff3a41a1c74e=Assignment(partitions=[html-pdf-svc.processed-0])}
+2024-11-08T14:00:24.016+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Successfully synced group in generation Generation{generationId=5, memberId='consumer-group_id-1-58148c94-6dc5-4ca0-9b0e-ff3a41a1c74e', protocol='range'}
+2024-11-08T14:00:24.017+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group_id-1, groupId=group_id] Notifying assignor about the new Assignment(partitions=[html-pdf-svc.processed-0])
+2024-11-08T14:00:24.022+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group_id-1, groupId=group_id] Adding newly assigned partitions: html-pdf-svc.processed-0
+2024-11-08T14:00:24.763+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition html-pdf-svc.processed-0 to the committed offset FetchPosition{offset=76909, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[fa-kafka-app-dev-03.highwire.org:9092 (id: 939831290 rack: null)], epoch=absent}}
+2024-11-08T14:00:24.869+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group_id: partitions assigned: [html-pdf-svc.processed-0]
+2024-11-08T14:09:19.180+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Node -2 disconnected.
+2024-11-08T14:09:20.037+05:30  INFO 18676 --- [pdfservice] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group_id-1, groupId=group_id] Node -3 disconnected.
