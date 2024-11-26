@@ -1,14 +1,13 @@
-package com.htmltopdf.pdfservice.repo;
+package org.highwire.htmlpdf.reprocessor.repository;
 
+import org.highwire.htmlpdf.reprocessor.entity.PdfCount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.htmltopdf.pdfservice.model.PdfCount;
-
 @Repository
-public interface PdfRetryRepo extends JpaRepository<PdfCount,  Integer>{
+public interface HtmlPdfRepository extends JpaRepository<PdfCount,  Integer>{
 
  
 

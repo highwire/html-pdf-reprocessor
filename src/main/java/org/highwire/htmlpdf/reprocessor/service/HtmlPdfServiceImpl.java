@@ -1,6 +1,9 @@
-package com.htmltopdf.pdfservice.service;
+package org.highwire.htmlpdf.reprocessor.service;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
+import org.highwire.htmlpdf.reprocessor.controller.HtmlPdfController;
+import org.highwire.htmlpdf.reprocessor.entity.PdfCount;
+import org.highwire.htmlpdf.reprocessor.repository.HtmlPdfRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +20,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.htmltopdf.pdfservice.controller.HtmlPdfController;
-import com.htmltopdf.pdfservice.model.PdfCount;
-import com.htmltopdf.pdfservice.repo.PdfRetryRepo;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,12 +30,12 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 
 @Service
-public class PdfServiceImpl implements PdfService{
+public class HtmlPdfServiceImpl implements HtmlPdfService{
  
 	@Autowired
-	private PdfRetryRepo pdfRetryRepo;
+	private HtmlPdfRepository pdfRetryRepo;
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(PdfServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(HtmlPdfServiceImpl.class);
 
 	  @Value("${pdf.max.retry}")
 	  private Integer maxRetryCount;
@@ -44,7 +44,7 @@ public class PdfServiceImpl implements PdfService{
 	  private String htmlpdfSvc;
 	
 	  @Autowired
-	  private EmailService emailService;
+	  private HtmlPdfEmailService emailService;
 	  
 	@Override
 	public Boolean readPdfUrl(String binsvcUrl) throws IOException {

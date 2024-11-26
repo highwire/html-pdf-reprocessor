@@ -1,0 +1,140 @@
+spring:
+  application:
+    name: pdfservice
+  
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: 'metrics,prometheus,health,info'
+  endpoint:
+    health:
+      show-details: always
+      
+      
+---
+
+spring:
+  config:
+    activate:
+      on-profile: default
+  datasource:
+    url: 'jdbc:mysql://highwire-dev-mysql02.highwire.org:3306/htmlpdf_dev'
+    username: journalmaint
+    password: r00frat
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: '587'
+    username: poojatomar1618@gmail.com
+    password: spwcahejcdwmsurc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  kafka:
+    bootstrap-servers: fr-kafka-app-dev-01.highwire.org:9092,fr-kafka-app-dev-02.highwire.org:9092,fr-kafka-app-dev-03.highwire.org:9092
+    admin:
+      request-timeout-ms: 5000
+            
+pdf:
+  max:
+    retry: '3'
+html:
+  pdf:
+    svc: 'http://html-pdf-svc-dev.highwire.org/create'
+      
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: 'jdbc:mysql://highwire-dev-mysql02.highwire.org:3306/htmlpdf_dev'
+    username: journalmaint
+    password: r00frat
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: '587'
+    username: poojatomar1618@gmail.com
+    password: spwcahejcdwmsurc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  kafka:
+    bootstrap-servers: fr-kafka-app-dev-01.highwire.org:9092,fr-kafka-app-dev-02.highwire.org:9092,fr-kafka-app-dev-03.highwire.org:9092
+    admin:
+      request-timeout-ms: 5000
+            
+pdf:
+  max:
+    retry: '3'
+html:
+  pdf:
+    svc: 'http://html-pdf-svc-dev.highwire.org/create'
+      
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: 'jdbc:mysql://highwire-dev-mysql02.highwire.org:3306/htmlpdf_dev'
+    username: journalmaint
+    password: r00frat
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: '587'
+    username: poojatomar1618@gmail.com
+    password: spwcahejcdwmsurc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  kafka:
+    bootstrap-servers: fr-kafka-app-prod-01.highwire.org:9092,fr-kafka-app-prod-02.highwire.org:9092,fr-kafka-app-prod-03.highwire.org:9092
+    admin:
+      request-timeout-ms: 10000
+            
+pdf:
+  max:
+    retry: '3'
+html:
+  pdf:
+    svc: 'http://html-pdf-svc.highwire.org/create'

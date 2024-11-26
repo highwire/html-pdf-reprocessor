@@ -1,8 +1,9 @@
-package com.htmltopdf.pdfservice.kafka;
+package org.highwire.htmlpdf.reprocessor.kafka;
 
 import java.io.IOException;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.highwire.htmlpdf.reprocessor.service.HtmlPdfService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,15 +12,14 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.htmltopdf.pdfservice.service.PdfService;
 
 @Component
- public class KafkaConsumer {
+ public class HtmlPdfConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(HtmlPdfConsumer.class);
 
     @Autowired
-     private PdfService pdfService;
+     private HtmlPdfService pdfService;
     
 @KafkaListener(topics = "html-pdf-svc.processed", groupId = "group_id") 
   public void consume(ConsumerRecord<String, String> record) throws IOException 

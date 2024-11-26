@@ -1,4 +1,4 @@
-package com.htmltopdf.pdfservice.model;
+package org.highwire.htmlpdf.reprocessor.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

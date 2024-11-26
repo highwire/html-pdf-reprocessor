@@ -1,4 +1,4 @@
-package com.htmltopdf.pdfservice.service;
+package org.highwire.htmlpdf.reprocessor.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +9,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmailService {
-	private static final Logger LOGGER = LoggerFactory.getLogger(PdfServiceImpl.class);
+public class HtmlPdfEmailService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(HtmlPdfServiceImpl.class);
 
 	  @Value("${spring.mail.username}")
 	  private String mailUsername;

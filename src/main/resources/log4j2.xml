@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="LOG_PATH" value="${sys:catalina.base}/logs/html-pdf-reprocessor" />
+		<!-- Property name="LOG_PATH" value="logs/html-pdf-reprocessor" / -->
+		<Property name="LOG_FILE_NAME" value="html-pdf-reprocessor" />
+		<Property name="LOG_FILE_PATTERN" value="%d{yyyy-MM-dd}.%i" />
+	</Properties>
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout
+				pattern="%d{ISO8601} %5p %X{req.addr} %X{appl.hostname} %X{appl.id} %C{1.} [%t]: %m%n" />
+		</Console>
+
+		<RollingFile name="file"
+			fileName="${LOG_PATH}/${LOG_FILE_NAME}.log"
+			filePattern="${LOG_PATH}/archived/${LOG_FILE_NAME}-${LOG_FILE_PATTERN}.log.gz">
+			<PatternLayout
+				pattern="%5p %d{ISO8601} %X{req.addr} %X{appl.hostname} %X{appl.id} %X{appl.sig} %X{ses.id} %X{req.id} %C{1.} [%t]: %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+			<DefaultRolloverStrategy max="30" />
+		</RollingFile>
+	</Appenders>
+	
+	<SpringProfile name="development,dev">
+		<Loggers>
+
+		<Root level="info" additivity="false">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="file" />
+		</Root>
+
+		<!-- this service & core libraries, etc -->
+		<Logger name="org.highwire.htmlpdf.reprocessor" level="info" additivity="false">
+			<AppenderRef ref="console" level="error" />
+			<AppenderRef ref="file" />
+		</Logger>
+
+		<!-- framework-level activity -->
+		<Logger name="org.springframework" level="warn" additivity="false">
+			<AppenderRef ref="file" />
+		</Logger>
+	</Loggers>
+	</SpringProfile>
+	
+	<SpringProfile name="production,prod">
+		<Loggers>
+
+		<Root level="warn" additivity="false">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="file" />
+		</Root>
+
+		<!-- this service & core libraries, etc -->
+		<Logger name="org.highwire.htmlpdf.reprocessor" level="info" additivity="false">
+			<AppenderRef ref="console" level="error" />
+			<AppenderRef ref="file" />
+		</Logger>
+
+		<!-- framework-level activity -->
+		<Logger name="org.springframework" level="warn" additivity="false">
+			<AppenderRef ref="file" />
+		</Logger>
+	</Loggers>
+	</SpringProfile>
+</Configuration>
