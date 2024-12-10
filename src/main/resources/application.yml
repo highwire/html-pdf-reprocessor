@@ -12,7 +12,15 @@ management:
     health:
       show-details: always
       
-      
+pdf:
+  white:
+      percentage: '95.0'
+
+pixel:
+  value: '200' 
+
+kafka:
+  topic:   'html-pdf-svc.processed'      
 ---
 
 spring:
@@ -104,7 +112,7 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: 'jdbc:mysql://highwire-dev-mysql02.highwire.org:3306/htmlpdf_dev'
+    url: 'jdbc:mysql://highwire-mysql-3.highwire.org:3306/html_pdf_reprocessor'
     username: journalmaint
     password: r00frat
     driver-class-name: com.mysql.cj.jdbc.Driver

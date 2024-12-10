@@ -42,6 +42,12 @@ public class HtmlPdfServiceImpl implements HtmlPdfService{
 	  
 	  @Value("${html.pdf.svc}")
 	  private String htmlpdfSvc;
+	  
+	  @Value("${pdf.white.percentage}")
+	  private Double pdfWhitePercentage;
+	  
+	  @Value("${pixel.value}")
+	  private Integer pixelValue;
 	
 	  @Autowired
 	  private HtmlPdfEmailService emailService;
@@ -95,7 +101,7 @@ public class HtmlPdfServiceImpl implements HtmlPdfService{
                 int b = color.getBlue();
 
                 // Check if the pixel is white or gray  
-                if (r > 200 && g > 200 && b > 200) {
+                if (r > pixelValue && g > pixelValue && b > pixelValue) {
                     whitePixelCount++;
                 }
             }
@@ -104,7 +110,7 @@ public class HtmlPdfServiceImpl implements HtmlPdfService{
          double whitePercentage = (whitePixelCount / (double) totalPixelCount) * 100;
         System.out.println("White/Gray Percentage: " + whitePercentage);
         LOGGER.info("White/Gray Percentage: " + whitePercentage);
-         return whitePercentage > 95.0;
+         return whitePercentage > pdfWhitePercentage;
     }
 
 	 

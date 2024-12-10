@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
     @Autowired
      private HtmlPdfService pdfService;
     
-@KafkaListener(topics = "html-pdf-svc.processed", groupId = "group_id") 
+    @KafkaListener(topics = "${kafka.topic}", groupId = "html-pdf-reprocessor-group") 
   public void consume(ConsumerRecord<String, String> record) throws IOException 
 { 
  	logger.debug("Received message from topic: {}", record.topic());
@@ -29,8 +29,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
     String[] parsedValues=pdfService.parseValues(record.value());
     Boolean isBlank=pdfService.readPdfUrl(parsedValues[1]);
     if(isBlank) {
+    	logger.info("Pdf is blank.");
    	 pdfService.processPdf(parsedValues[1],parsedValues[0],parsedValues[2]); 
-    } 
+    }  else {
+    	logger.info("Pdf is not blank.");
+    }
     
   System.out.println("This is my message = " + record.value());
 } 

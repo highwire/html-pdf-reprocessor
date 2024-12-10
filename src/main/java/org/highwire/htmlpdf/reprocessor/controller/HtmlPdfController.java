@@ -26,8 +26,7 @@ public class HtmlPdfController {
 	@Autowired
     KafkaTemplate<String, String> kafkaTemplate; 
   
-    static final String TOPIC = "html-pdf-svc.processed"; 
-       
+        
     
     //For testing purpose
      @GetMapping("isPdfBlank") 
